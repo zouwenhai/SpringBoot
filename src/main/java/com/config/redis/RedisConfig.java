@@ -45,6 +45,7 @@ public class RedisConfig {
     @Bean
     public JedisPool redisPoolFactory() throws Exception {
 
+
         log.info("创建redis缓存");
         JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
         jedisPoolConfig.setMaxIdle(maxIdle);
