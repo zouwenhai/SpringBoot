@@ -19,6 +19,7 @@ public class SpringBootDemo1 {
 
         System.out.println("hello spring boot");
         redisUtil.set("aa","aa",0);
+        redisUtil.get("aa",0);
         return "hello spring boot";
     }
 
