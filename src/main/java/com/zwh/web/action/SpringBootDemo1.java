@@ -2,7 +2,6 @@
 package com.zwh.web.action;
 
 import com.redis.utils.RedisUtil;
-import org.springframework.data.redis.connection.jedis.JedisUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
