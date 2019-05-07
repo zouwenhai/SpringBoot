@@ -1,8 +1,6 @@
 package com.zwh.plan.demo.highio.logic;
 
-import com.zwh.plan.demo.highio.dao.TrainMapper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 /**
  * @ClassName BuyTicketsLogicImpl
@@ -11,15 +9,16 @@ import org.springframework.stereotype.Service;
  * @Date 2019/4/27 0:29
  * @Version 1.0
  */
-@Service
+@Component(value = "buyTicketLogic")
 public class BuyTicketsLogicImpl implements BuyTicketLogic {
 
-    @Autowired
+   /* @Autowired
     private TrainMapper trainMapper;
-
+*/
     @Override
     public Integer queryTicket() {
 
-        return trainMapper.queryCountByNum("001");
+        return 1;
+        //return trainMapper.queryCountByNum("001");
     }
 }

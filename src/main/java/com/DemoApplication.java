@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class, MybatisAutoConfiguration.class})
 @ComponentScan(basePackages = {"com.*"})
-@MapperScan("com.zwh.plan.demo.highio.dao")
+@MapperScan("com.zwh.plan.demo.highio.mapper")
 public class DemoApplication {
 
     public static void main(String[] args) {

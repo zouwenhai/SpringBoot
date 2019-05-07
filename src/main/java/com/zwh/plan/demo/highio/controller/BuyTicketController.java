@@ -32,7 +32,7 @@ public class BuyTicketController {
         return count.toString();
     }
 
-    @Test
+/*    @Test
     public void test1() {
 
         for (int i = 0; i < count; i++) {
@@ -41,5 +41,5 @@ public class BuyTicketController {
         }
 
 
-    }
+    }*/
 }
