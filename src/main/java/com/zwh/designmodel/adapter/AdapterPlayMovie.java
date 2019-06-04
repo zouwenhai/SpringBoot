@@ -2,7 +2,7 @@ package com.zwh.designmodel.adapter;
 
 /**
  * @ClassName AdapterPlayMovie
- * @Description 适配器
+ * @Description 适配器模式
  * @Author zouwenhai
  * @Date 2019/5/13 23:50
  * @Version 1.0

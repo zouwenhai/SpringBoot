@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @ClassName Resume
- * @Description 简历（原型模式）
+ * @Description 简历
  * @Author zouwenhai
  * @Date 2019/5/19 14:36
  * @Version 1.0

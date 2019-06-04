@@ -2,6 +2,7 @@ package com.zwh.plan.demo.highio.mapper;
 
 import com.zwh.plan.demo.highio.entity.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -15,5 +16,6 @@ import java.util.List;
 @Mapper
 public interface UserMapper {
 
+     @Select("select * from user")
      List<User> queryUserList();
 }

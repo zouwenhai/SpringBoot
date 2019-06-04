@@ -44,11 +44,14 @@ public class Test {
     @org.junit.Test
     public void test2() {
 
+
+
+
         new Thread() {
 
             @Override
             public void run() {
-                System.out.println(Singleton2.getSingleton());
+                System.out.println(Thread.currentThread().getName()+Singleton2.getSingleton());
             }
         }.start();
 
@@ -56,32 +59,7 @@ public class Test {
 
             @Override
             public void run() {
-                System.out.println(Singleton2.getSingleton());
-            }
-        }.start();
-
-
-        new Thread() {
-
-            @Override
-            public void run() {
-                System.out.println(Singleton2.getSingleton());
-            }
-        }.start();
-
-        new Thread() {
-
-            @Override
-            public void run() {
-                System.out.println();
-            }
-        }.start();
-
-        new Thread() {
-
-            @Override
-            public void run() {
-                System.out.println(Singleton2.getSingleton());
+                System.out.println(Thread.currentThread().getName()+Singleton2.getSingleton());
             }
         }.start();
 
@@ -90,7 +68,25 @@ public class Test {
 
             @Override
             public void run() {
-                System.out.println(Singleton2.getSingleton());
+                System.out.println(Thread.currentThread().getName()+Singleton2.getSingleton());
+            }
+        }.start();
+
+
+        new Thread() {
+
+            @Override
+            public void run() {
+                System.out.println(Thread.currentThread().getName()+Singleton2.getSingleton());
+            }
+        }.start();
+
+
+        new Thread() {
+
+            @Override
+            public void run() {
+                System.out.println(Thread.currentThread().getName()+Singleton2.getSingleton());
             }
         }.start();
 

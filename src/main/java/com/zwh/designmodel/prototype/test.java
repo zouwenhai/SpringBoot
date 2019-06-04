@@ -4,7 +4,7 @@ import org.junit.Test;
 
 /**
  * @ClassName test
- * @Description TODO
+ * @Description 浅克隆/深克隆
  * @Author zouwenhai
  * @Date 2019/5/19 16:10
  * @Version 1.0
@@ -41,10 +41,15 @@ public class test {
         resume1.setAge(16);
         String[] hobby = resume1.getHobby();
         hobby[0]="睡觉";
+        System.out.println(resume);
         System.out.println(resume.toString());
         System.out.println("Hobby:"+resume.getHobby());
+        System.out.println(resume1);
         System.out.println(resume1.toString());
         System.out.println("Hobby2:"+resume1.getHobby());
+        System.out.println("Hobby2:"+resume1.getHobby());
+
+
 
 
 
