@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import com.designmodel.prototype.ConcreteResume;
+import com.designmodel.prototype.Resume2;
 import org.junit.Test;
 
 import java.util.*;
@@ -31,14 +33,54 @@ public class DemoCollection {
         List linklist = new LinkedList();
 
 
+        Resume2 resume =new ConcreteResume();
 
-        Set set = new HashSet();
-
-        List list3 = new LinkedList();
-
-
+        System.out.println("resume:{}"+resume);
+        System.out.println("resume.hashCode():{}"+resume.hashCode());
+        System.out.println("resume.hashCode():{}"+resume.toString());
 
 
+        Map map = new HashMap();
+        map.size();
+        System.out.println(1<<4);
+
+        Map map1  = new HashMap();
+        Map map2 = new LinkedHashMap();
+        Map map3 = new TreeMap();
+
+
+
+
+
+
+    }
+
+
+
+    @Test
+    public void test2(){
+        int e=100;
+        Integer a=100;
+        Integer b=100;
+        Integer c=200;
+        Integer d=200;
+        System.out.println(a==b);
+        System.out.println(c==d);
+        System.out.println(e==a);
+        //
+
+    }
+
+
+    @Test
+    public void test3(){
+        int c=100;
+        Integer a= new Integer(100);
+        Integer b= new Integer(100);
+        System.out.println(a==b);
+        System.out.println(a==c);
+        System.out.println(b==c);
+        //
 
     }
 }

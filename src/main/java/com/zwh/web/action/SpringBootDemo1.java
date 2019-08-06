@@ -13,6 +13,7 @@ public class SpringBootDemo1 {
 
     @Resource
     private RedisUtil redisUtil;
+
     @RequestMapping(path = { "/helloSpringBoot" })
     public String HelloSpring() {
 
