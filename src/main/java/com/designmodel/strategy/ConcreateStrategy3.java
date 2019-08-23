@@ -7,7 +7,10 @@ package com.designmodel.strategy;
  * @Date 2019/6/4 14:15
  * @Version 1.0
  */
-public class ConcreateStrategy3 implements Strategy {
+public class
+
+
+  ConcreateStrategy3 implements Strategy {
 
     @Override
     public void algorithmMethod() {

@@ -20,6 +20,7 @@ public class Test {
 
     }
 
+    @org.junit.Test
     public int  add(){
 
         int a=1;
