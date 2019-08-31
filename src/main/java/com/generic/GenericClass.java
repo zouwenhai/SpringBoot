@@ -25,4 +25,28 @@ public class GenericClass<T> {
     public void setData(T data) {
         this.data = data;
     }
+
+
+    public  T getWay1(T t){
+
+        return t;
+    }
+
+
+    /**
+     * 静态方法就不能用泛型
+     * @param t
+     * @param <T>
+     * @return
+     */
+   /* public static T getWay2(T t){
+        return t;
+    }*/
+
+
+    public static <T> T getWay3(T t){
+        return t;
+    }
+
+
 }

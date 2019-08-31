@@ -24,4 +24,19 @@ public class GenericWay {
 
 
 
+
+
+    public static  <T>  T  getWay1(T t){
+
+        return t;
+    }
+
+
+   /* public <K>  K  getWay1(K k1,K k2){
+
+      *//*  K k = (K)(k1*k2);*//*
+        return k;
+    }*/
+
+
 }

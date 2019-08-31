@@ -49,6 +49,7 @@ public class Java8Features {
 
     /**
      * 实现runnable接口
+     * 无参数无返回值
      */
 
 
@@ -75,6 +76,15 @@ public class Java8Features {
             System.out.println("y为"+y);
             return Integer.compare(x,y);
         };
+
+        Comparator<Integer> c = new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return 0;
+            }
+        };
+
+
         System.out.println(com.compare(1111,111));
         // x为1111
         // y为111
@@ -82,3 +92,5 @@ public class Java8Features {
     }
 
 }
+
+
