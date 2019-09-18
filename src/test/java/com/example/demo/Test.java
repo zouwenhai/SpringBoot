@@ -3,6 +3,8 @@ package com.example.demo;
 import packagea.A;
 import packagea.E;
 
+import java.time.LocalDateTime;
+
 /**
  * @ClassName Test
  * @Description TODO
@@ -15,9 +17,11 @@ public class Test {
 
     public static void main(String[] args){
 
-        Test test = new Test();
-        int d = test.add();
+     String str="2019-09-11 09:13:18";
+     String a=str.split(" ")[0];
+     System.out.println(a);
 
+     System.out.println(LocalDateTime.now());
 
 
 
