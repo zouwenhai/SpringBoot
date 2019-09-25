@@ -4,6 +4,8 @@ import org.junit.Test;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -102,6 +104,41 @@ public class DateTimeUtils {
      * LocalTime的用法
      */
     public void test5() {
+
+
+    }
+
+
+    /**
+     * LocalDate的用法
+     */
+    @Test
+    public void test6() {
+
+        //获取当前的日期年月日
+        System.out.println(LocalDate.now());
+
+        //根据参数设置日期
+        System.out.println(LocalDate.of(2017, 9, 30));
+
+        LocalDate localDate = LocalDate.now();
+        //获取当前日期是所在月的第几天
+        System.out.println(localDate.getDayOfMonth());
+        //获取当前日期是所在年的第几天
+        System.out.println(localDate.getDayOfYear());
+        //获取当前日期是星期几（星期的英文全称）
+        System.out.println(localDate.getDayOfWeek());
+        //获取当前月份（全英文名称）
+        System.out.println(localDate.getMonth());
+        //获取当前月份所在的数值
+        System.out.println(localDate.getMonthValue());
+        //获取当前月份有多少天
+        System.out.println(localDate.lengthOfMonth());
+        //获取当前所在年有多少天
+        System.out.println(localDate.lengthOfYear());
+        //获取当前日期所在年是否是闰年
+        System.out.println(localDate.isLeapYear());
+
 
 
     }

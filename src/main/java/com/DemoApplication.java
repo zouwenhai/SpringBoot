@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication(exclude={DataSourceAutoConfiguration.class})//屏蔽数据库连接
-@ComponentScan(basePackages = {"com.swager.controller"})
+@ComponentScan(basePackages = {"com.swager"})
 
 public class DemoApplication {
 
