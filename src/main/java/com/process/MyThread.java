@@ -20,6 +20,7 @@ public class MyThread {
         return new ThreadPoolExecutor(nThreads, nThreads, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>(), threadFactory);
     }
 
+
     /**
      * 单例线程池(newSingleThreadExecutor)
      *

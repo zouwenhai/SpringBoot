@@ -53,7 +53,7 @@ public class Java8Features {
      */
 
 
-    public void test1(){
+    public void test1() {
 
         Runnable runnable = new Runnable() {
             @Override
@@ -70,11 +70,11 @@ public class Java8Features {
 
 
     @Test
-    public void test2(){
+    public void test2() {
         Comparator<Integer> com = (x, y) -> {
-            System.out.println("x为"+x);
-            System.out.println("y为"+y);
-            return Integer.compare(x,y);
+            System.out.println("x为" + x);
+            System.out.println("y为" + y);
+            return Integer.compare(x, y);
         };
 
         Comparator<Integer> c = new Comparator<Integer>() {
@@ -85,10 +85,28 @@ public class Java8Features {
         };
 
 
-        System.out.println(com.compare(1111,111));
+        System.out.println(com.compare(1111, 111));
         // x为1111
         // y为111
         // 1
+    }
+
+
+    /**
+     * @Builder属性的用法
+     */
+    @Test
+    public void test3() {
+
+    }
+
+    /**
+     * Operation的用法
+     */
+    @Test
+    public void test4() {
+
+
     }
 
 }
