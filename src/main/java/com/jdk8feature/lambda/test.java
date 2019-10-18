@@ -160,4 +160,14 @@ public class test {
         List<String> s1 = strFilter(Arrays.asList("hangg","afafa","132","112fsf"),(x)->x.length()>3);
         System.out.println(s1);
     }
+
+
+
+    @Test
+    public void test5(){
+
+    }
+
+
+
 }

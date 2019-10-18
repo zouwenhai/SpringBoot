@@ -10,7 +10,7 @@ import javax.annotation.Resource;
 
 @RestController
 @Slf4j
-public class SpringBootDemo1 {
+public class SpringBootWeb {
 
 
     @Resource

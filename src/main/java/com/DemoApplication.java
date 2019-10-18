@@ -11,7 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
 import javax.annotation.Resource;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})//屏蔽数据库连接
-@ComponentScan(basePackages = {"com.swager","com.process"})
+@ComponentScan(basePackages = {"com.springutil","com.process"})
 public class DemoApplication {
 
     @Resource
