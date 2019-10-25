@@ -11,8 +11,7 @@ import lombok.Setter;
  * @work //TODO
  */
 @Getter
-@Setter
-@Builder
+@Builder(toBuilder = true)
 public class User {
 
     private Integer id;
