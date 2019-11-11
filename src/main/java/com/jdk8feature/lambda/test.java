@@ -2,9 +2,11 @@ package com.jdk8feature.lambda;
 
 import org.junit.Test;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -85,6 +87,10 @@ public class test {
     }
 
 
+
+
+
+
     //调用此方法时，第二个参数提供一个数字集合
     public List<Integer> getNumList(int n, Supplier<Integer> sup) {
         List<Integer> numList = new ArrayList<>();
@@ -133,17 +139,14 @@ public class test {
 
 
     /**
-     *
      * @param strs
      * @param predicate Predicate<T> 条件判断 boolean test(T t); 返回boolean
-     *
      * @return
      */
     public List<String> strFilter(List<String> strs, Predicate<String> predicate) {
         List<String> list = new ArrayList<>();
         strs.forEach(str -> {
             if (predicate.test(str)) {
-
                 list.add(str);
             }
         });
@@ -153,21 +156,37 @@ public class test {
     }
 
 
-
     @Test
-    public void testPredicate(){
+    public void testPredicate() {
         //过滤出字符串长度大于3的字符
-        List<String> s1 = strFilter(Arrays.asList("hangg","afafa","132","112fsf"),(x)->x.length()>3);
+        List<String> s1 = strFilter(Arrays.asList("hangg", "afafa", "132", "112fsf"), (x) -> x.length() > 3);
         System.out.println(s1);
     }
 
 
-
     @Test
-    public void test5(){
+    public void test5() {
+
+        BigDecimal var = new BigDecimal("5.22");
+        System.out.println(NumberFormatUtil.format(var, "0"));
+        System.out.println(var.setScale(0, BigDecimal.ROUND_HALF_UP));
 
     }
 
+
+    @Test
+    public void test6() {
+
+        User user = null;
+        //构造一个Optional容器，但如果user为空的话就会抛异常。
+        Optional<User> optional1 = Optional.of(user);
+        //构造一个Optional容器，但如果user为空则返回一个空的Optional对象
+        Optional<User> optional2 = Optional.ofNullable(user);
+        //如果为空则返回传进去的参数
+        User user2 = optional2.orElse(User.builder().userName("jack").id(1).build());
+
+
+    }
 
 
 }

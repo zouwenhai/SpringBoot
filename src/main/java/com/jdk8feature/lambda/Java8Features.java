@@ -74,7 +74,6 @@ public class Java8Features {
         log.info("time1:{}", endTime2 - statTime1);
 
 
-
     }
 
 
@@ -193,6 +192,7 @@ public class Java8Features {
             return 1;
 
         });*/
+        //排序1
         list.sort((a, b) -> {
             return b.getId().intValue() - a.getId().intValue();
         });
@@ -207,6 +207,11 @@ public class Java8Features {
         }).forEach(c->{
             System.out.println(c);
         });*/
+
+
+        //排序2
+        list.sort(Comparator.comparing(Teacher::getAge).reversed());
+
 
     }
 
