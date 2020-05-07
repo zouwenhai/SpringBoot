@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@Api(value = "测试Controller" , tags = "测试类")
+@Api(tags = "测试类", description = "测试Controller")
 public class SpringBootDemo1 {
 
 

@@ -9,6 +9,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 /**
  * @author zouwenhai
@@ -138,10 +139,15 @@ public class DateTimeUtils {
         System.out.println(localDate.lengthOfYear());
         //获取当前日期所在年是否是闰年
         System.out.println(localDate.isLeapYear());
-
-
-
     }
 
+
+    @Test
+    public void test7() {
+
+        Date date = new Date();
+        System.out.println(date.before(new Date()));
+        System.out.println();
+    }
 
 }

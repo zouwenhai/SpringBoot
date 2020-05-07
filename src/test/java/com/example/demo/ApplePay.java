@@ -7,7 +7,8 @@ package com.example.demo;
  * @Date 2019/6/26 21:19
  * @Version 1.0
  */
-public class ApplePay extends AbstractPay {
+public class
+ApplePay extends AbstractPay {
 
 
 
