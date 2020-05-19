@@ -41,7 +41,6 @@ public class RedisConfig {
     private boolean blockWhenExhausted;
 
 
-
     @Bean
     public JedisPool redisPoolFactory() throws Exception {
 
