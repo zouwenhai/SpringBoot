@@ -1,7 +1,7 @@
 package com.example.demo;
 
-import com.designmodel.prototype.ConcreteResume;
-import com.designmodel.prototype.Resume2;
+import com.designpattern.create.prototype.ConcreteResume;
+import com.designpattern.create.prototype.Resume2;
 import org.junit.Test;
 
 import java.util.*;

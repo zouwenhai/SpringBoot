@@ -9,6 +9,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author zouwenhai
@@ -142,6 +144,25 @@ public class DateTimeUtils {
 
 
     }
+
+
+    @Test
+    public void test7(){
+        System.out.println(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
+
+        String s="2020-03-102020-03-20";
+        String[] times  = s.split("/");
+        //天数差
+        String startTime = "2020-02-10";
+        String endTime = "2020-03-20";
+        long daysNum = LocalDate.parse(endTime).toEpochDay() - LocalDate.parse(startTime).toEpochDay();
+        for (long i = 0; i <=daysNum; i++) {
+           System.out.println(LocalDate.parse(startTime).plusDays(i).format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
+        }
+    }
+
+
+
 
 
 }

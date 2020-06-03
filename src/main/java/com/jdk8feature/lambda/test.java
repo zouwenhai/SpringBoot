@@ -1,14 +1,17 @@
 package com.jdk8feature.lambda;
 
+import com.google.common.collect.Maps;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
+import java.util.stream.Collectors;
 
 /**
  * @ClassName test
@@ -133,10 +136,8 @@ public class test {
 
 
     /**
-     *
      * @param strs
      * @param predicate Predicate<T> 条件判断 boolean test(T t); 返回boolean
-     *
      * @return
      */
     public List<String> strFilter(List<String> strs, Predicate<String> predicate) {
@@ -153,11 +154,38 @@ public class test {
     }
 
 
-
     @Test
-    public void testPredicate(){
+    public void testPredicate() {
         //过滤出字符串长度大于3的字符
-        List<String> s1 = strFilter(Arrays.asList("hangg","afafa","132","112fsf"),(x)->x.length()>3);
+        List<String> s1 = strFilter(Arrays.asList("hangg", "afafa", "132", "112fsf"), (x) -> x.length() > 3);
         System.out.println(s1);
+    }
+
+
+    /**
+     * 测试集合过滤方法
+     */
+    @Test
+    public void testFilter() {
+        List<Person> persons = Arrays.asList(new Person(1, "system", "1"), new Person(2, "jack", "1"), new Person(3, "tom", "1"));
+        //过滤转为新的集合
+        List<Person> newList = persons.stream().filter(person -> person.getId() > 2).collect(Collectors.toList());
+        newList.stream().forEach(ele -> {
+            System.out.println(ele.getId());
+        });
+        //
+        Map<Integer, Person> map = persons.stream().filter(person -> person.getId() > 1).collect(Maps::newHashMap, (hashMap, person) -> hashMap.put(person.getId(), person), Map::putAll);
+        for (Map.Entry entry : map.entrySet()) {
+            System.out.println(entry.getKey());
+        }
+
+    }
+
+    /**
+     * 双冒号运算符
+     */
+    public void testMaohao() {
+
+
     }
 }
