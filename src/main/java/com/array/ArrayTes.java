@@ -3,7 +3,9 @@ package com.array;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import static java.lang.System.out;
 
@@ -49,7 +51,33 @@ public class ArrayTes {
     }
 
 
+    @Test
+    public void test3() {
 
+        int[] a = {1, 2, 3};
+        int[] b = new int[]{1, 2, 3};
+        int[] c = new int[100];
+        for (int i = 0; i < 100; i++) {
+            c[i] = i;
+        }
+
+    }
+
+
+    /**
+     * 数组转集合
+     */
+    @Test
+    public void test4() {
+        String[] pod = new String[]{"haha", "xixi", "heihei"};
+        Integer[] b = new Integer[]{1, 3, 5};
+        //数组只能是包装类
+        Arrays.asList(b);
+        List<String> list = Arrays.asList(pod);
+
+
+
+    }
 
 
 }

@@ -1,5 +1,7 @@
 package com.file.utils;
 
+import org.junit.Test;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -23,6 +25,32 @@ public class HttpGetServerSource {
         System.out.println("//");
 
     }
+
+
+
+    @Test
+    public void deleteFile() {
+
+
+        try {
+            // Specify the file name and path
+            File file = new File("D:\\opt\\heyrupee\\niuxin\\2020-06-01\\50929043.MP3");
+      /* the delete() method return true if the file
+      deleted successfully else it return false
+       */
+            if (file.delete()) {
+                System.out.println(file.getName() + "is deleted");
+            } else {
+                System.out.println("Delete failed.");
+            }
+        } catch (Exception e) {
+            System.out.println("Exception occured");
+            e.printStackTrace();
+        }
+    }
+
+
+
 
 
 

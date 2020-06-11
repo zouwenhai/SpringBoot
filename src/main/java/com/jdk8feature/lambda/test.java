@@ -11,6 +11,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
+import java.util.stream.Collectors;
 
 /**
  * @ClassName test
@@ -87,10 +88,6 @@ public class test {
     }
 
 
-
-
-
-
     //调用此方法时，第二个参数提供一个数字集合
     public List<Integer> getNumList(int n, Supplier<Integer> sup) {
         List<Integer> numList = new ArrayList<>();
@@ -134,7 +131,7 @@ public class test {
     @Test
     public void testFunction() {
 
-        System.out.println(handleStr("ADADADDA", (d) -> d.toLowerCase()));
+        System.out.println(handleStr("ADADADDA", d -> d.toLowerCase()));
     }
 
 
@@ -185,6 +182,24 @@ public class test {
         //如果为空则返回传进去的参数
         User user2 = optional2.orElse(User.builder().userName("jack").id(1).build());
 
+
+    }
+
+
+    @Test
+
+    public void test7() {
+
+        Long loginUserId = 1L;
+        List<Long> userIdList = new ArrayList<>();
+        userIdList.add(0L);
+        userIdList.add(1L);
+        userIdList.add(1456L);
+        userIdList.add(0L);
+        userIdList.add(12L);
+        userIdList.add(7L);
+        userIdList.add(9L);
+        List<Long> newUserIdList = userIdList.stream().filter(t -> t.longValue() != loginUserId).collect(Collectors.toList());
 
     }
 
