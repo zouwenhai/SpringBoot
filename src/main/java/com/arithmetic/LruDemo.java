@@ -19,12 +19,13 @@ public class LruDemo {
     @Test
     public void test() {
 
-        Map<String,Integer> map = new LinkedHashMap();
+        Map<String, Integer> map = new LinkedHashMap();
         map.put("1", 1);
         map.put("2", 2);
         map.put("3", 3);
-        for (Map.Entry<String,Integer> entry : map.entrySet()){
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
             System.out.println(entry.getValue());
+            System.out.println("master");
         }
 
 
