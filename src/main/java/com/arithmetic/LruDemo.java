@@ -29,6 +29,7 @@ public class LruDemo {
         map.put("4", 4);
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
             System.out.println(entry.getValue());
+            System.out.println("1");
         }
 
 
