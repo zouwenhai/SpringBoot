@@ -16,14 +16,17 @@ public class SpringBootDemo1 {
     @Resource
     private RedisUtil redisUtil;
 
-    @RequestMapping(path = { "/helloSpringBoot" })
+    @RequestMapping(path = {"/helloSpringBoot"})
     public String HelloSpring() {
 
         System.out.println("hello spring boot");
-        redisUtil.set("aa","aa",0);
-        redisUtil.get("aa",0);
+        redisUtil.set("aa", "aa", 0);
+        redisUtil.get("aa", 0);
 
         return "hello spring boot";
     }
+
+
+
 
 }
