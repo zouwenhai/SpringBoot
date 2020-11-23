@@ -1,5 +1,8 @@
 package com.test;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @ClassName Test
  * @Description TODO
@@ -10,11 +13,16 @@ package com.test;
 public class Test {
 
 
-
-    public static void main(String[] args){
-
-
-
+    @org.junit.Test
+    public void test1() {
+        Object1 object1 = new Object1();
+        Map<String, Object1> map = new HashMap<>();
+        map.put("2", object1);
+        Object1 object11 = new Object1();
+        object1.getA();
+        //这行代码为什么会报空指针异常
+        object11.setA(map.containsKey("2") ? map.get("2").getA() : 0);
 
     }
+
 }

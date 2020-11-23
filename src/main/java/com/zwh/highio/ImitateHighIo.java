@@ -1,8 +1,5 @@
 package com.zwh.highio;
 
-import org.junit.Test;
-
-import java.util.UUID;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -17,11 +14,18 @@ import java.util.concurrent.Executors;
 public class ImitateHighIo {
 
 
+    /**
+     * 模拟高并发
+     * 子线程在执行前首先等待，等countDownLatch计数器变为0时同时执行
+     *
+     * @param args
+     */
+
     public static void main(String[] args) {
         int number = 100;
 
 
-        CountDownLatch countDownLatch = new CountDownLatch(number);
+        CountDownLatch countDownLatch = new CountDownLatch(100);
 
         //线程池
         ExecutorService exec = Executors.newFixedThreadPool(number);
@@ -38,7 +42,6 @@ public class ImitateHighIo {
                 public void run() {
                     try {
 
-                        System.out.println("-------------");
                         countDownLatch.await();
                         System.out.println(Thread.currentThread().getName());
 
@@ -49,8 +52,8 @@ public class ImitateHighIo {
                 }
             }.start();
             countDownLatch.countDown();
-
         }
+        System.out.println("主线程开始执行");
     }
 
 }

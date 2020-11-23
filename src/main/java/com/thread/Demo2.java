@@ -18,6 +18,7 @@ public class Demo2 {
     /**
      * 已经被废弃的 suspend()（暂停）、resume()（恢复） 和 stop()（停止）。
      * 废弃原因是，在调用方法之后，线程不会保证占用的资源被正常释放。
+     *
      * @param args
      * @throws InterruptedException
      */
@@ -52,18 +53,35 @@ public class Demo2 {
     }
 
 
-
     @Test
-    public void test(){
+    public void test() {
 
-        Integer a =200;
-        Integer b=200;
+        Integer a = 200;
+        Integer b = 200;
         System.out.println(a.equals(b));
 
     }
 
 
+    @Test
+    public void test3() {
+        int count = 2000;
+        int a = 3000;
+        System.out.println(a / count);
+        System.out.println(a / count > 0 ? a / count : a / count + 1);
+    }
 
+
+    @Test
+    public void test4() {
+
+        String date1 = "2020-06-23";
+        String date2 = "2020-04-35";
+
+
+
+
+    }
 
 
 }
