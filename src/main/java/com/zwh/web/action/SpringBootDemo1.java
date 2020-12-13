@@ -16,6 +16,10 @@ public class SpringBootDemo1 {
     @Resource
     private RedisUtil redisUtil;
 
+    /**
+     * 这个只能是post请求
+     * @return
+     */
     @RequestMapping(path = {"/helloSpringBoot"})
     public String HelloSpring() {
 

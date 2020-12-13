@@ -116,8 +116,13 @@ public class CollectionTest {
     @Test
     public void test4() {
 
-        List<Integer> b = Arrays.asList(1,2,3,4,5,6,7);
+        List<Integer> b = Arrays.asList(1, 2, 3, 4, 5, 6, 7);
         b.add(1);
+        //Arrays.asList得到的数组是java.util.Arrays.ArrayList，是自定义的内部类，没有实现add,remove等方法。而是直接调用java.util.AbstractList的add方法
+        //  public void add(int index, E element) {
+        //        throw new UnsupportedOperationException();
+        //    }
+        //但是父类方法没有实现，不支持。
         List<Integer> a = new ArrayList<>();
         a.add(1);
         a.add(2);
@@ -126,6 +131,26 @@ public class CollectionTest {
         a.add(5);
         a.removeIf(e -> e > 3);
         a.forEach(e -> System.out.println(e));
+
+    }
+
+
+    /**
+     * 利用compareTo排序
+     */
+    @Test
+    public void test5() {
+
+
+        List<Integer> a = new ArrayList<>();
+        a.add(1);
+        a.add(3);
+        a.add(2);
+        a.add(4);
+        a.sort((x, y) -> x.compareTo(y));
+        a.forEach(e -> {
+            System.out.println(e);
+        });
 
     }
 
