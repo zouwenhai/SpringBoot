@@ -7,6 +7,9 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 /**
  * @author zouwenhai
  * @version v1.0
@@ -27,5 +30,20 @@ public class SpringBootLogTest {
         log.warn("这是warn日志");
         log.error("这是error日志");
 
+    }
+
+
+    @Test
+    public void test2(){
+        LocalDate date = LocalDate.parse("1999-06-23", DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        System.out.println(LocalDate.now().minusYears(25));
+        System.out.println(LocalDate.now().minusYears(18));
+        System.out.println(date.isBefore(LocalDate.now().minusYears(18)));
+        System.out.println(date.isAfter(LocalDate.now().minusYears(25)));
+
+        System.out.println("PfVStnQNv4PU5UZ93J1rtA==".trim().length());
+        if(date.isAfter(LocalDate.now().minusYears(25))&&date.isBefore(LocalDate.now().minusYears(18))){
+            System.out.println(1);
+        }
     }
 }

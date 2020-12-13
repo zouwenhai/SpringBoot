@@ -10,6 +10,7 @@ import lombok.Setter;
  * @date 2019/8/22 16:27
  * @work //TODO
  */
+
 @Getter
 @Setter
 public class User {
@@ -17,6 +18,9 @@ public class User {
     private Long id;
 
     private Role role;
+
+
+
 
 
     public User(Long id, Role role) {
@@ -30,4 +34,6 @@ public class User {
         String roleName = customeAn.roleName();
         return roleName;
     }
+
+
 }
