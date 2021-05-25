@@ -19,7 +19,7 @@ public class SwagerConfig {
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .pathMapping("/swagger")
+              /*  .pathMapping("/swagger")*/
                 .apiInfo(apiInfo())
                 .select()
                 //Controller所在包(必须新建包)

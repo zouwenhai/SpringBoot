@@ -109,7 +109,7 @@ public class RedisUtil {
             return jedis.set(key, value);
         } catch (Exception e) {
 
-            log.error(e.getMessage());
+            log.error(e.getMessage(),e);
             return "0";
         } finally {
             returnResource(jedisPool, jedis);

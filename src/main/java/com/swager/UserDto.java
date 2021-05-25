@@ -3,13 +3,14 @@ package com.swager;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-
+import javax.validation.constraints.NotNull;
 
 
 @ApiModel("请求参数")
 public class UserDto {
 
-    @ApiModelProperty("名字")  //参数Model对应属性的接口文档描述
+    @ApiModelProperty("名字")
+    @NotNull(message = "name不能为空")
     private String name;
 
     public String getName() {
@@ -20,12 +21,4 @@ public class UserDto {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder("{");
-        sb.append("\"name\":\"")
-                .append(name).append('\"');
-        sb.append("}");
-        return sb.toString();
-    }
 }

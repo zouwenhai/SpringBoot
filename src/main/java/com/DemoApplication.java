@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 import javax.annotation.Resource;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})//屏蔽数据库连接
-@ComponentScan(basePackages = {"com.process", "com.config.redis", "com.redis.utils", "com.swager"})
+@ComponentScan(basePackages = {"com.process", "com.config.redis", "com.redis.utils", "com.swager", "com.exception"})
 
 public class DemoApplication {
 

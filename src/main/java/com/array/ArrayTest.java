@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @ClassName ArrayTest
@@ -90,6 +91,18 @@ public class ArrayTest {
 
     }
 
+    @Test
+    public void testStream() {
+
+        List<String> list = Arrays.asList("1132", "2232", "3232");
+        list.stream().map(e -> e.length()).collect(Collectors.toList());
+        list.stream().map(e -> e.concat("afdf")).collect(Collectors.toList()).forEach(e -> {
+            System.out.println(e);
+        });
+        list.stream().filter(e -> e.length() > 3).collect(Collectors.toList());
+        System.out.println(list.stream().anyMatch(e -> e.equals("1132")));
+
+    }
 
 
 }

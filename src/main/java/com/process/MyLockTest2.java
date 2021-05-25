@@ -15,12 +15,12 @@ public class MyLockTest2 implements Runnable {
     private ReentrantLock reentrantLock = new ReentrantLock();
 
     public void get() {
-        System.out.println("2 enter thread name-->" + Thread.currentThread().getName());
+//        System.out.println("2 enter thread name-->" + Thread.currentThread().getName());
         reentrantLock.lock();
         System.out.println("3 get thread name-->" + Thread.currentThread().getName());
-        set();
-        reentrantLock.unlock();
-        System.out.println("5 leave run thread name-->" + Thread.currentThread().getName());
+//        set();
+//        reentrantLock.unlock();
+//        System.out.println("5 leave run thread name-->" + Thread.currentThread().getName());
     }
 
     public void set() {
@@ -36,7 +36,7 @@ public class MyLockTest2 implements Runnable {
     }
 
     public static void main(String[] args) {
-        MyLockTest test = new MyLockTest();
+        MyLockTest2 test = new MyLockTest2();
         for (int i = 0; i < 10; i++) {
             new Thread(test, "thread-" + i).start();
         }
